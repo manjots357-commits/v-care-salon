@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --color-brand-navy: #0A1931;
+  --color-brand-ice: #B3CFE5;
+  --color-brand-cerulean: #4A7FA7;
+  --color-brand-marine: #1A3D63;
+  --color-brand-frost: #F6FAFD;
+
+  /* Aliased brand palette variables */
+  --color-brand-gold: #B3CFE5;
+  --color-brand-gold-light: #F6FAFD;
+  --color-brand-gold-dark: #4A7FA7;
+  --color-brand-dark: #0A1931;
+  --color-brand-emerald: #1A3D63;
+  --color-brand-emerald-dark: #0A1931;
+}
+
+@layer utilities {
+  .tracking-superwide {
+    letter-spacing: 0.35em;
+  }
+  .tracking-widest-plus {
+    letter-spacing: 0.25em;
+  }
+  .gold-gradient-text,
+  .ocean-gradient-text {
+    background: linear-gradient(135deg, #F6FAFD 0%, #B3CFE5 40%, #4A7FA7 80%, #B3CFE5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .glass-panel {
+    background: linear-gradient(135deg, rgba(26, 61, 99, 0.35) 0%, rgba(10, 25, 49, 0.65) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(179, 207, 229, 0.12);
+  }
+  .glass-panel-gold,
+  .glass-panel-ocean {
+    background: linear-gradient(135deg, rgba(74, 127, 167, 0.18) 0%, rgba(26, 61, 99, 0.5) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(179, 207, 229, 0.28);
+  }
+  .tilt-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+}
+
+/* Custom Cursor */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor-active {
+    cursor: none;
+  }
+  body.custom-cursor-active a,
+  body.custom-cursor-active button,
+  body.custom-cursor-active input,
+  body.custom-cursor-active textarea,
+  body.custom-cursor-active select,
+  body.custom-cursor-active [role="button"] {
+    cursor: none;
+  }
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A1931;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(179, 207, 229, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(179, 207, 229, 0.65);
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 24s linear infinite;
+}
+

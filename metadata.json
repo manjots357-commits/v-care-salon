@@ -1,0 +1,6 @@
+{
+  "name": "V Care Salon",
+  "description": "Luxury salon in Tarn Taran, Punjab specializing in beauty, cosmetic & personal care, precision hair styling, and cinematic pampering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
